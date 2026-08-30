@@ -127,7 +127,7 @@ python3.12 -m venv venv
 source venv/bin/activate
 ```
 
-If `python3.12` is not available on your system, install Python 3.12 before continuing.
+If python3.12 is not available on your system, install Python 3.12 before continuing.
 
 ### 3. Install backend dependencies
 
