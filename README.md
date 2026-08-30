@@ -33,7 +33,7 @@ The project combines two main parts:
 ## Project architecture
 
 ```text
-App-IA/
+ComputerVision/
 │
 ├── Proyecto2_IA.ipynb          # Notebook with training, evaluation, and analysis
 ├── README.md                   # Main project documentation
@@ -41,10 +41,10 @@ App-IA/
 ├── backend/
 │   ├── app.py                  # Flask API and inference logic
 │   ├── requirements.txt        # Backend dependencies
-│   ├── models/                 # Trained .keras models
-│   │   ├── resnet50v2_brain_tumor.keras
-│   │   └── efficientnetb0_brain_tumor.keras
-│   └── __pycache__/
+│   └── models/                 # Trained .keras models
+│       ├── resnet50v2_brain_tumor.keras
+│       └── efficientnetb0_brain_tumor.keras
+│   
 │
 └── frontend/
     ├── index.html              # User interface
