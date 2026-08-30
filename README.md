@@ -1,53 +1,53 @@
 # Brain Tumor Classifier
 
-## Descripción
+## Description
 
-**Brain Tumor Classifier** es un proyecto de visión por computadora y aprendizaje profundo para clasificar tumores cerebrales a partir de imágenes de resonancia magnética (MRI). La aplicación utiliza redes neuronales preentrenadas mediante transfer learning para identificar cuatro clases principales:
+**Brain Tumor Classifier** is a computer vision and deep learning project for classifying brain tumors from magnetic resonance imaging (MRI) scans. The application uses pretrained neural networks via transfer learning to identify four main classes:
 
 - `glioma`
 - `meningioma`
 - `notumor`
 - `pituitary`
 
-El proyecto combina dos partes principales:
+The project combines two main parts:
 
-1. Un notebook de investigación y entrenamiento en [Proyecto2_IA.ipynb](Proyecto2_IA.ipynb)
-2. Una aplicación web funcional para realizar predicciones desde una interfaz gráfica
+1. A research and training notebook in [Proyecto2_IA.ipynb](Proyecto2_IA.ipynb)
+2. A functional web application for making predictions through a graphical interface
 
 ---
 
-## Características
+## Features
 
-* Clasificación automática de imágenes de MRI
-* Soporte para dos modelos de transferencia:
+* Automatic classification of MRI images
+* Support for two transfer learning models:
   - ResNet50V2
   - EfficientNetB0
-* Predicción con probabilidad por clase
-* Visualización de la diferencia entre la primera y segunda clase predicha
-* Mapa de activación Grad-CAM para interpretar la predicción
-* Interfaz web simple y amigable
-* Backend en Flask para servir la API y la aplicación
+* Prediction with per-class probability
+* Visualization of the difference between the first and second predicted class
+* Grad-CAM activation map to interpret the prediction
+* Simple, user-friendly web interface
+* Flask backend to serve the API and the application
 
 ---
 
-## Arquitectura del proyecto
+## Project architecture
 
 ```text
 App-IA/
 │
-├── Proyecto2_IA.ipynb          # Notebook con entrenamiento, evaluación y análisis
-├── README.md                   # Documentación principal del proyecto
+├── Proyecto2_IA.ipynb          # Notebook with training, evaluation, and analysis
+├── README.md                   # Main project documentation
 │
 ├── backend/
-│   ├── app.py                  # API Flask y lógica de inferencia
-│   ├── requirements.txt        # Dependencias del backend
-│   ├── models/                 # Modelos .keras entrenados
+│   ├── app.py                  # Flask API and inference logic
+│   ├── requirements.txt        # Backend dependencies
+│   ├── models/                 # Trained .keras models
 │   │   ├── resnet50v2_brain_tumor.keras
 │   │   └── efficientnetb0_brain_tumor.keras
 │   └── __pycache__/
 │
 └── frontend/
-    ├── index.html              # Interfaz de usuario
+    ├── index.html              # User interface
     └── static/
         ├── css/
         │   └── style.css
@@ -57,13 +57,13 @@ App-IA/
 
 ---
 
-## Stack tecnológico
+## Tech stack
 
-### Lenguaje
+### Language
 
 * Python
 
-### Bibliotecas principales
+### Main libraries
 
 * TensorFlow / Keras
 * Flask
@@ -73,63 +73,63 @@ App-IA/
 * JavaScript
 * HTML / CSS
 
-### Modelos usados
+### Models used
 
 * ResNet50V2
 * EfficientNetB0
 
 ---
 
-## Objetivos del proyecto
+## Project goals
 
-1. Cargar y procesar datasets de imágenes médicas MRI
-2. Entrenar modelos con transfer learning
-3. Comparar métricas entre arquitecturas
-4. Evaluar desempeño con precisión, recall, F1-score y accuracy
-5. Generar una app web capaz de clasificar imágenes en tiempo real
-6. Visualizar regiones relevantes mediante Grad-CAM
+1. Load and process medical MRI image datasets
+2. Train models using transfer learning
+3. Compare metrics between architectures
+4. Evaluate performance using precision, recall, F1-score, and accuracy
+5. Build a web app capable of classifying images in real time
+6. Visualize relevant regions using Grad-CAM
 
 ---
 
-## Requisitos previos
+## Prerequisites
 
-Antes de ejecutar el proyecto asegúrate de tener instalado:
+Before running the project, make sure you have installed:
 
 * Python 3.10+
 * pip
-* entorno virtual (recomendado)
-* acceso a la carpeta con los modelos entrenados
+* virtual environment (recommended)
+* access to the folder with the trained models
 
 ---
 
-## Configuración del entorno
+## Environment setup
 
-### 1. Clonar el repositorio
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/OvidioMT/ComputerVision.git
 cd ComputerVision
 ```
 
-### 2. Crear un entorno virtual con Python 3.12
+### 2. Create a virtual environment with Python 3.12
 
-En Windows, Python 3.12:
+On Windows, Python 3.12:
 
 ```bash
 py -3.12 -m venv venv
 venv\Scripts\activate
 ```
 
-En macOS / Linux:
+On macOS / Linux:
 
 ```bash
 python3.12 -m venv venv
 source venv/bin/activate
 ```
 
-Si `python3.12` no está disponible en tu sistema, instala Python 3.12 antes de continuar.
+If `python3.12` is not available on your system, install Python 3.12 before continuing.
 
-### 3. Instalar dependencias del backend
+### 3. Install backend dependencies
 
 ```bash
 cd backend
@@ -138,16 +138,16 @@ pip install -r requirements.txt
 
 ---
 
-## Ejecución
+## Running the project
 
-### Iniciar el servidor backend
+### Start the backend server
 
 ```bash
 cd backend
 python app.py
 ```
 
-El proyecto quedará disponible en:
+The project will be available at:
 
 ```text
 http://localhost:5000
@@ -155,40 +155,40 @@ http://localhost:5000
 
 ---
 
-## Uso de la aplicación
+## Using the application
 
-1. Selecciona el modelo a utilizar:
+1. Select the model to use:
    - ResNet50V2
    - EfficientNetB0
-2. Carga una imagen MRI en la interfaz
-3. Haz clic en "Analyze image"
-4. La app mostrará:
-   - clase detectada
-   - confianza de la predicción
-   - distribución de probabilidades
-   - tiempo de inferencia
-   - comparación de resultados
-   - mapa Grad-CAM (si está habilitado)
+2. Upload an MRI image in the interface
+3. Click "Analyze image"
+4. The app will display:
+   - detected class
+   - prediction confidence
+   - probability distribution
+   - inference time
+   - results comparison
+   - Grad-CAM map (if enabled)
 
 ---
 
-## Notas sobre los modelos
+## Notes on the models
 
-Los archivos de modelos entrenados se encuentran en la carpeta:
+The trained model files are located in the folder:
 
 ```text
 backend/models/
 ```
 
-Estos archivos tienen formato `.keras` y se cargan automáticamente al iniciar la aplicación. Si el proyecto se clona en otra máquina, es necesario que esos modelos estén presentes en la ruta indicada.
+These files are in `.keras` format and are loaded automatically when the application starts. If the project is cloned on another machine, those models must be present at the indicated path.
 
 ---
 
 ## Dataset
 
-La investigación del proyecto se basa en un conjunto de imágenes MRI para la clasificación de tumores cerebrales. El notebook [Proyecto2_IA.ipynb](Proyecto2_IA.ipynb) describe la carga, exploración, balanceo y preparación del dataset.
+The project's research is based on a set of MRI images for brain tumor classification. The notebook [Proyecto2_IA.ipynb](Proyecto2_IA.ipynb) describes the loading, exploration, balancing, and preparation of the dataset.
 
-El dataset original fue tomado de una fuente pública de Kaggle y contiene las siguientes cuatro categorías:
+The original dataset was taken from a public Kaggle source and contains the following four categories:
 
 - `glioma`
 - `meningioma`
@@ -197,47 +197,47 @@ El dataset original fue tomado de una fuente pública de Kaggle y contiene las s
 
 ---
 
-## Estructura funcional
+## Functional structure
 
-### Notebook de investigación
+### Research notebook
 
-El archivo [Proyecto2_IA.ipynb](Proyecto2_IA.ipynb) contiene:
+The file [Proyecto2_IA.ipynb](Proyecto2_IA.ipynb) contains:
 
-* preparación del dataset
-* exploración de clases
-* análisis de distribución
-* visualización de imágenes
-* aumento de datos
-* entrenamiento con ResNet50V2 y EfficientNetB0
-* cálculo de métricas
-* matrices de confusión
-* curvas de aprendizaje
+* dataset preparation
+* class exploration
+* distribution analysis
+* image visualization
+* data augmentation
+* training with ResNet50V2 and EfficientNetB0
+* metrics calculation
+* confusion matrices
+* learning curves
 * Grad-CAM
 
 ### Backend
 
-El archivo [backend/app.py](backend/app.py) contiene:
+The file [backend/app.py](backend/app.py) contains:
 
-* carga de modelos
-* preparación de la imagen de entrada
-* predicción con Flask
-* serialización de resultados JSON
-* generación de Grad-CAM
-* endpoint `/api/predict`
+* model loading
+* input image preparation
+* prediction with Flask
+* JSON result serialization
+* Grad-CAM generation
+* `/api/predict` endpoint
 
 ### Frontend
 
-La interfaz en [frontend/index.html](frontend/index.html) y [frontend/static/js/main.js](frontend/static/js/main.js) permite:
+The interface in [frontend/index.html](frontend/index.html) and [frontend/static/js/main.js](frontend/static/js/main.js) allows you to:
 
-* seleccionar el modelo
-* subir una imagen
-* enviar la imagen al backend
-* visualizar resultados y métricas
+* select the model
+* upload an image
+* send the image to the backend
+* view results and metrics
 
 ---
 
-## Créditos
+## Credits
 
-### Autor
+### Author
 
 * Ovidio Martínez Taleno
