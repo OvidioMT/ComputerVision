@@ -2,7 +2,7 @@
 
 ## Description
 
-**Brain Tumor Classifier** is a computer vision and deep learning project for classifying brain tumors from magnetic resonance imaging (MRI) scans. The application uses pretrained neural networks via transfer learning to identify four main classes:
+Brain Tumor Classifier is a computer vision and deep learning project for classifying brain tumors from magnetic resonance imaging (MRI) scans. The application uses pretrained neural networks via transfer learning to identify four main classes:
 
 - `glioma`
 - `meningioma`
