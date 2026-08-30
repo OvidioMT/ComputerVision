@@ -36,7 +36,6 @@ El proyecto combina dos partes principales:
 App-IA/
 │
 ├── Proyecto2_IA.ipynb          # Notebook con entrenamiento, evaluación y análisis
-├── READMEEJEMPLO.md            # Ejemplo de referencia para la documentación
 ├── README.md                   # Documentación principal del proyecto
 │
 ├── backend/
