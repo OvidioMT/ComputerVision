@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brain Tumor Classifier - MRI</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-brand">
+      <h1>Brain Tumor Classifier</h1>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <header class="section-header">
+      <h1>Brain Tumor Classifier</h1>
+      <p class="subtitulo">Image classification powered by transfer learning</p>
+    </header>
+
+    <div class="layout-dos-columnas">
+      <section class="panel panel-entrada">
+        <div class="campo">
+          <label for="modelo">Model</label>
+          <select id="modelo">
+            <option value="resnet">ResNet50V2</option>
+            <option value="efficientnet">EfficientNetB0</option>
+          </select>
+        </div>
+
+        <div class="zona-carga" id="zonaCarga">
+          <input type="file" id="inputImagen" accept="image/*" hidden>
+          <p id="textoZona">Drag an image here or click to select one</p>
+          <img id="previsualizacion" alt="Image preview" hidden>
+        </div>
+
+        <button id="botonAnalizar" disabled>Analyze image</button>
+
+        <div id="estado" class="estado" hidden></div>
+      </section>
+
+      <section class="panel-resultado">
+        <div id="resultado" class="resultado panel" hidden>
+          <div class="resultado-cabecera">
+            <div>
+              <span class="etiqueta-clase" id="claseDetectada"></span>
+              <p id="confianza" class="confianza-texto"></p>
+            </div>
+          </div>
+
+          <p class="nota-segunda-opcion" id="segundaOpcion"></p>
+
+          <div class="grid-info">
+            <div class="info-celda">
+              <span class="info-etiqueta">Inference time</span>
+              <span class="info-valor" id="tiempoInferencia"></span>
+            </div>
+            <div class="info-celda">
+              <span class="info-etiqueta">Model accuracy</span>
+              <span class="info-valor" id="accuracyModelo"></span>
+            </div>
+            <div class="info-celda">
+              <span class="info-etiqueta">Model F1-score</span>
+              <span class="info-valor" id="f1Modelo"></span>
+            </div>
+          </div>
+
+          <div class="seccion-gradcam" id="seccionGradcam" hidden>
+            <h3>Activation map (Grad-CAM)</h3>
+            <p class="texto-suave">
+              Regions of the image that most influenced the model prediction.
+            </p>
+            <div class="comparacion-imagenes">
+              <div class="imagen-bloque">
+                <span class="info-etiqueta">Original</span>
+                <img id="imagenOriginal" alt="Original MRI image">
+              </div>
+              <div class="imagen-bloque">
+                <span class="info-etiqueta">Overlay</span>
+                <img id="imagenGradcam" alt="Grad-CAM heatmap overlay">
+              </div>
+            </div>
+          </div>
+
+          <h3 class="titulo-seccion">Probability distribution</h3>
+          <div id="barras" class="barras"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>
