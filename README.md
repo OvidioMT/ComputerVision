@@ -107,25 +107,27 @@ Antes de ejecutar el proyecto asegúrate de tener instalado:
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/nsandovalm/App-IA.git
-cd App-IA
+git clone https://github.com/OvidioMT/ComputerVision.git
+cd ComputerVision
 ```
 
-### 2. Crear un entorno virtual
+### 2. Crear un entorno virtual con Python 3.12
 
-En Windows:
+En Windows, Python 3.12:
 
 ```bash
-python -m venv venv
+py -3.12 -m venv venv
 venv\Scripts\activate
 ```
 
 En macOS / Linux:
 
 ```bash
-python3 -m venv venv
+python3.12 -m venv venv
 source venv/bin/activate
 ```
+
+Si `python3.12` no está disponible en tu sistema, instala Python 3.12 antes de continuar.
 
 ### 3. Instalar dependencias del backend
 
@@ -150,8 +152,6 @@ El proyecto quedará disponible en:
 ```text
 http://localhost:5000
 ```
-
-Luego abre el navegador y accede a esa dirección para usar la interfaz web.
 
 ---
 
@@ -233,17 +233,6 @@ La interfaz en [frontend/index.html](frontend/index.html) y [frontend/static/js/
 * subir una imagen
 * enviar la imagen al backend
 * visualizar resultados y métricas
-
----
-
-## Recomendaciones futuras
-
-* Añadir validación y pruebas automatizadas
-* Mejorar el manejo de errores del backend
-* Documentar la versión exacta de TensorFlow y dependencias
-* Crear un archivo `.env` para configuración
-* Preparar despliegue con Docker o un servidor WSGI
-* Añadir soporte para múltiples tipos de imagen o preprocesamiento extra
 
 ---
 
